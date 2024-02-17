@@ -9,10 +9,14 @@ import render5 from "../../../../public/renderCama5.PNG";
 import render6 from "../../../../public/interior2.jpeg"
 import render7 from "../../../../public/interior3.jpg"
 import render8 from "../../../../public/interior4.jpg"
+import render9 from "../../../../public/interior5.jpg"
+import render10 from "../../../../public/interior6.jpg"
+import render11 from "../../../../public/interior7.jpg"
+import render12 from "../../../../public/interior8.jpg"
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 
-const imagenes = [render1, render2, render3, render4, render5,render6,render7,render8,];
+const imagenes = [render1, render2, render3, render4, render5, render6, render7, render8, render9, render10,render11,render12];
 const GaleriaInteriores = () => {
   const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
   const [imagenActual, setImagenActual] = useState(0);
@@ -84,7 +88,7 @@ const GaleriaInteriores = () => {
             {imagenes.map((imagen, index) => (
               <div
                 key={index}
-                className="cursor-pointer overflow-hidden rounded-lg transition-transform transform hover:scale-105 relative group p-1"
+                className="cursor-pointer h-[250px] md:h-[300px] overflow-hidden rounded-lg transition-transform transform hover:scale-105 relative group p-1"
                 onClick={() => handleClickImagen(imagen, index)}
               >
                 <Image

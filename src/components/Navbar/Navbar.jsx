@@ -28,17 +28,16 @@ export default function NavbarLayout() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const menuItems = [
-    { title: "interiores", path: "/interiores" },
-    { title: "exteriores", path: "/exteriores" },
+    { title: "Interiores", path: "/interiores" },
+    { title: "Exteriores", path: "/exteriores" },
     { title: "360°", path: "/360" },
-    { title: "Planos 3D", path: "/planos3d" },
-
+    { title: "Animaciones", path: "/animaciones" },
     { title: "Sobre mi", path: "/sobremi" },
     { title: "Contacto", path: "/contacto" },
     { title: "Pedir presupuesto", path: "/presupuesto" },
   ];
   const path = usePathname();
-  console.log(path);
+
 
   // Manejar el evento de scroll
   const handleScroll = () => {
@@ -114,9 +113,9 @@ export default function NavbarLayout() {
             className={` ${
               path === "/planos3d" ? "text-indigo-600" : "text-black"
             }`}
-            href="/planos3d"
+            href="/animaciones"
           >
-            Planos 3D
+            Animaciones
           </Link>
         </NavbarItem>
         <NavbarItem>

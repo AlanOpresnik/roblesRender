@@ -58,14 +58,13 @@ const Footer = () => {
                 Contactame
               </h4>
               <EmailOutlined />
-              <span className="ml-2">Roblesrender@gmail.com</span>
+              <span className="ml-2">matiroblesarq97@gmail.com</span>
             </div>
             <div className="mt-4 flex items-center">
               <LocationOnOutlined />
               <div className="max-w-[320px] flex">
                 <span className="ml-2">
-                  Norcenter Local 20 - Munro - Buenos Aires. Abierto todos los
-                  días de 12 a 20hs.
+                  Moreno, Buenos Aires Argentina
                 </span>
               </div>
             </div>
