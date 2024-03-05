@@ -7,7 +7,7 @@ import img from "../../../public/360.jpeg"
 const ImageViewer = () => {
     const projection = useMemo(() => {
         return new EquirectProjection({
-            src: "/360.jpeg",
+            src: "/interior360.jpg",
             video: false
         });
     }, []);
@@ -16,10 +16,10 @@ const ImageViewer = () => {
         <View360
 
             id="viewer" // Cambié "#viewer" a "id"
-            className="is-16by9 z-50 h-[500px]"
+            className="is-16by9  h-[400px] md:h-[500px] rounded-lg shadow-xl"
             projection={projection}
         >
-            <img className='w-[500px] h-[500px]' src="/360.jpeg" alt="" />
+            <img className='w-[500px] h-[400px] md:h-[500px] rounded-xl shadow-xl' src="/360.jpeg" alt="" />
         </View360>
     );
 };

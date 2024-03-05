@@ -4,7 +4,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   Button,
   NavbarMenuItem,
   NavbarMenuToggle,
@@ -15,6 +14,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { usePathname } from "next/navigation";
 import logo from "../../../public/Logo.jpeg";
 import Image from "next/image";
+import Link from "next/link";
+
 import {
   Facebook,
   FacebookOutlined,
@@ -31,10 +32,11 @@ export default function NavbarLayout() {
     { title: "Interiores", path: "/interiores" },
     { title: "Exteriores", path: "/exteriores" },
     { title: "360°", path: "/360" },
-    { title: "Animaciones", path: "/animaciones" },
+    { title: "Planos 3D", path: "/planos" },
     { title: "Sobre mi", path: "/sobremi" },
     { title: "Contacto", path: "/contacto" },
     { title: "Pedir presupuesto", path: "/presupuesto" },
+    { title: "Descargar CV", path: "https://drive.google.com/file/d/1LdP6pJA3MhxG5JIK-oU1hVVtG9AuYG9R/view" }
   ];
   const path = usePathname();
 
@@ -82,47 +84,53 @@ export default function NavbarLayout() {
       <NavbarContent className="hidden sm:flex gap-6" justify="center">
         <NavbarItem>
           <Link
-            className={` ${
-              path === "/interiores" ? "text-indigo-600" : "text-black"
-            }`}
+            className={` ${path === "/" ? "text-indigo-600" : "text-black"
+              }`}
+            href="/"
+          >
+            Inicio
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link
+            className={` ${path === "/interiores" ? "text-indigo-600" : "text-black"
+              }`}
             href="/interiores"
           >
-            interiores
+            Interiores
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            className={` ${
-              path === "/exteriores" ? "text-indigo-600" : "text-black"
-            }`}
+            className={` ${path === "/exteriores" ? "text-indigo-600" : "text-black"
+              }`}
             href="/exteriores"
           >
-            exteriores
+            Exteriores
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            className={` ${path === "/360" ? "text-indigo-600" : "text-black"}`}
-            href="/360"
+            className={` ${path === "/interiores/360" ? "text-indigo-600" : "text-black"}`}
+            href="/interiores/360"
           >
             360°
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            className={` ${
-              path === "/planos3d" ? "text-indigo-600" : "text-black"
-            }`}
-            href="/animaciones"
+            className={` ${path === "/planos" ? "text-indigo-600" : "text-black"}`}
+            href="/planos"
           >
-            Animaciones
+            Planos 3D
           </Link>
         </NavbarItem>
         <NavbarItem>
+        </NavbarItem>
+        <NavbarItem>
           <Link
-            className={` ${
-              path === "/sobremi" ? "text-indigo-600" : "text-black"
-            }`}
+            className={` ${path === "/sobremi" ? "text-indigo-600" : "text-black"
+              }`}
             href="/sobremi"
           >
             Sobre mi
@@ -132,15 +140,14 @@ export default function NavbarLayout() {
 
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button as={Link} color="primary" target="_BLANK" href="https://drive.google.com/file/d/1LdP6pJA3MhxG5JIK-oU1hVVtG9AuYG9R/view" variant="flat">
             Descargar CV
           </Button>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu
-        className={`bg-white  overflow-scroll  ${
-          isMenuOpen ? "left-0" : "left-[-400px]"
-        } transition-all duration-300   w-[320px]`}
+        className={`bg-white    ${isMenuOpen ? "left-0" : "left-[-400px]"
+          } transition-all duration-300   w-[320px]`}
       >
         <div className="flex flex-col items-center ">
           <div className="h-[200px]">

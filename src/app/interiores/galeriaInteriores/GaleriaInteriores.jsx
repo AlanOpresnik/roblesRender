@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import render1 from "../../../../public/interior.PNG";
 import render2 from "../../../../public/002.jpg";
 import render3 from "../../../../public/001.jpg";
@@ -13,10 +13,15 @@ import render9 from "../../../../public/interior5.jpg"
 import render10 from "../../../../public/interior6.jpg"
 import render11 from "../../../../public/interior7.jpg"
 import render12 from "../../../../public/interior8.jpg"
+import render13 from "../../../../public/interior9.jpg"
+import render14 from "../../../../public/interior10.jpg"
+import render15 from "../../../../public/interior11.jpg"
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
+import { Button } from "@nextui-org/react";
+import Link from "next/link";
 
-const imagenes = [render1, render2, render3, render4, render5, render6, render7, render8, render9, render10,render11,render12];
+const imagenes = [render1, render2, render3, render4, render5, render6, render7, render8, render9, render10, render11, render12, render13, render14, render15];
 const GaleriaInteriores = () => {
   const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
   const [imagenActual, setImagenActual] = useState(0);
@@ -62,11 +67,14 @@ const GaleriaInteriores = () => {
     }
   };
 
+  useEffect(() => {
+    console.log("first")
+  }, [imagenes])
+  
+
   return (
-    <motion.section
+    <section
       className="text-gray-600 body-font"
-      initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0 }}
     >
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-12 mx-auto flex flex-wrap items-center justify-center">
@@ -145,8 +153,11 @@ const GaleriaInteriores = () => {
             )}
           </div>
         </div>
+        <div className="flex w-full justify-center mb-12">
+          <Link className="bg-primary-500 p-2 rounded-lg px-2 text-white hover:bg-primary-400 transition-colors duration-75" href={'/interiores/360'} color="primary">Ver Interior en 360 grados</Link>
+        </div>
       </section>
-    </motion.section>
+    </section>
   );
 };
 

@@ -1,5 +1,7 @@
 import Image from "next/image";
 import heroImg from "../../../public/heroImg.PNG";
+import Link from "next/link";
+import { Button } from "@nextui-org/react";
 
 const HeroDividerMain = () => {
   return (
@@ -20,18 +22,22 @@ const HeroDividerMain = () => {
             <br className="hidden lg:inline-block" />
           </h1>
           <span className="text-sm py-0 mb-4 border-b">RoblesRender</span>
-          <p className="mb-8 leading-relaxed">
-            Diseño arquitectonico, Modelado 3D de tu proyecto, modelado 3D de
-            mobiliario, imágenes interiores, imagenes exteriores, animaciones,
-            imagenes 360
-          </p>
+          <ul className="mb-8 leading-relaxed  items-center ">
+            <li>Diseño arquitectónico</li>
+            <li>Modelado 3D de tu proyecto</li>
+            <li>Modelado 3D de mobiliario</li>
+            <li>Imágenes interiores</li>
+            <li>Imágenes exteriores</li>
+            <li>Animaciones</li>
+            <li>Imágenes 360</li>
+          </ul>
           <div className="flex justify-center">
-            <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-            Pedir presupuesto
-            </button>
-            <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+            <Button as={Link} target="_BLANK" href={"https://wa.me/+5491128736549"} className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              Pedir presupuesto
+            </Button>
+            <Button as={Link} href="/interiores" className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
               Ver mas
-            </button>
+            </Button>
           </div>
         </div>
       </div>

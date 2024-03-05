@@ -17,7 +17,7 @@ const Footer = () => {
               <Image width={300} height={100} src={logo} />
               <div className="opacity-50 text-center">
                 © {new Date().getFullYear()} StudioRender. Todos los derechos
-                reservados. matias robles
+                reservados. Matias Robles
               </div>
               <div className="opacity-50 text-center text-xs mt-12 ">
                 Pagina web desarrollda por @alan_opk

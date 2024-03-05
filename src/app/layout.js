@@ -1,10 +1,10 @@
 "use client"
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import { NextUIProvider } from "@nextui-org/react";
-import Footer from "@/components/Footer/Footer";
-import WspLogo from "@/components/WspLogo/WspLogo";
+import Footer from "../components/Footer/Footer";
+import WspLogo from "../components/WspLogo/WspLogo";
 
 
 // Create the Inter font instance

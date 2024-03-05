@@ -1,4 +1,35 @@
+"use client"
+
+import axios from 'axios';
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const recipient = 'matiroblesarq97@gmail.com';
+    emailjs.send('service_tcqwgck', 'template_2qt530f', formData, 'A5U2CmImp2b8hX4Gy',)
+      .then((result) => {
+        console.log('Correo electrónico enviado correctamente:', result.text);
+      }, (error) => {
+        console.error('Error al enviar el correo electrónico:', error.text);
+      });
+  };
+
+
+
+
   return (
     <section className="text-gray-600 body-font relative">
       <div className="container px-5 pt-6 pb-24 mx-auto">
@@ -10,7 +41,7 @@ const ContactForm = () => {
             Mandame un correo para poder brindarte una atencion personalizada
           </p>
         </div>
-        <div className="lg:w-1/2 md:w-2/3 mx-auto">
+        <form onSubmit={handleSubmit} className="lg:w-1/2 md:w-2/3 mx-auto">
           <div className="flex flex-wrap -m-2">
             <div className="p-2 w-1/2">
               <div className="relative">
@@ -24,6 +55,7 @@ const ContactForm = () => {
                   type="text"
                   id="name"
                   name="name"
+                  onChange={handleInputChange}
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -40,6 +72,7 @@ const ContactForm = () => {
                   type="email"
                   id="email"
                   name="email"
+                  onChange={handleInputChange}
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -55,12 +88,14 @@ const ContactForm = () => {
                 <textarea
                   id="message"
                   name="message"
+                  onChange={handleInputChange}
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
               </div>
             </div>
             <div className="p-2 w-full">
-              <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              <button type='submit'
+                className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                 Enviar
               </button>
             </div>
@@ -120,7 +155,7 @@ const ContactForm = () => {
               </span>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </section>
   );

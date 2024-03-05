@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import heroImg from "../../../../../public/HeroExterior.jpg";
 import Image from "next/image";
+import Link from "next/link";
 const HeaderExterior = () => {
     const [isVisible, setIsVisible] = useState(false);
 
@@ -36,17 +37,13 @@ const HeaderExterior = () => {
                             </h1>
                             <span className="text-sm py-0 mb-4 border-b">RoblesRender</span>
                             <p className="mb-8 leading-relaxed">
-                                Buscamos brindarte el mejor y más moderno diseño de interior que
-                                puedas imaginar, tanto en acabados como en precio. Calidad al
-                                detalle y atención 24 horas para su comodidad.
+                                Genera un gran impacto visual de tus proyectos con un render exterior, con nuestros exteriores explica la relación de tu preyecto con su entorno
                             </p>
                             <div className="flex justify-center">
                                 <button className="inline-flex mb-6 md:mb-0 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                                     Contactar
                                 </button>
-                                <button className="inline-flex mb-6 ml-4 md:mb-0  bg-[#ededed] text-[#374151] border-0 py-2 px-6 focus:outline-none hover:bg-[#E5E7EB] rounded text-lg">
-                                    Ver Exterior 360
-                                </button>
+
                             </div>
                         </div>
                         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 h-[400px]">
@@ -69,17 +66,13 @@ const HeaderExterior = () => {
                         </h1>
                         <span className="text-sm py-0 mb-4 border-b">RoblesRender</span>
                         <p className="mb-8 leading-relaxed">
-                            Buscamos brindarte el mejor y más moderno diseño de interior que
-                            puedas imaginar, tanto en acabados como en precio. Calidad al
-                            detalle y atención 24 horas para su comodidad.
+                            Genera un gran impacto visual de tus proyectos con un render exterior, con nuestros exteriores explica la relación de tu preyecto con su entorno
                         </p>
                         <div className="flex justify-center">
                             <button className="inline-flex mb-6 md:mb-0 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                                 Contactar
                             </button>
-                            <button className="inline-flex mb-6 ml-4 md:mb-0 bg-[#ededed] text-[#374151] border-0 py-2 px-6 focus:outline-none hover:bg-[#E5E7EB] rounded text-lg">
-                                Ver Exterior 360
-                            </button>
+
                         </div>
                     </div>
                     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
