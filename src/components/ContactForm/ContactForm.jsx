@@ -1,6 +1,4 @@
 "use client"
-
-import axios from 'axios';
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 const ContactForm = () => {
