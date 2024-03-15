@@ -1,0 +1,11 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/exteriores/page": "app/exteriores/page.js",
+  "/interiores/page": "app/interiores/page.js",
+  "/animaciones/page": "app/animaciones/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/interiores/360/page": "app/interiores/360/page.js",
+  "/sobremi/page": "app/sobremi/page.js",
+  "/planos/page": "app/planos/page.js",
+  "/page": "app/page.js"
+}
