@@ -49,7 +49,7 @@ const DividerSections = () => {
             muted
           >
             <source
-              src="https://nodos-studio.com/wp-content/uploads/2023/10/Video-sin-titulo-%E2%80%90-Hecho-con-Clipchamp.mp4"
+              src="/exteriores/exteriorVideo.mov"
               type="video/mp4"
             />
             Your browser does not support the video tag.

@@ -27,7 +27,7 @@ const WspLogo = () => {
 
   return (
     <div className={visible}>
-      <Link href={"https://wa.me/+541169393427"} target="BlANK">
+      <Link href={"https://wa.me/+541128736549"} target="BlANK">
         <Image
           width={100}
           heigth={100}

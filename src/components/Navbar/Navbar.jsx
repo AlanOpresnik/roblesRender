@@ -33,9 +33,8 @@ export default function NavbarLayout() {
     { title: "Exteriores", path: "/exteriores" },
     { title: "360°", path: "/360" },
     { title: "Planos 3D", path: "/planos" },
+    { title: "Animaciones", path: "/animaciones " },
     { title: "Sobre mi", path: "/sobremi" },
-    { title: "Contacto", path: "/contacto" },
-    { title: "Pedir presupuesto", path: "/presupuesto" },
     { title: "Descargar CV", path: "https://drive.google.com/file/d/1LdP6pJA3MhxG5JIK-oU1hVVtG9AuYG9R/view" }
   ];
   const path = usePathname();
@@ -126,6 +125,14 @@ export default function NavbarLayout() {
           </Link>
         </NavbarItem>
         <NavbarItem>
+          <Link
+            className={` ${path === "/animaciones" ? "text-indigo-600" : "text-black"}`}
+            href="/animaciones"
+          >
+            Animaciones
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
         </NavbarItem>
         <NavbarItem>
           <Link
@@ -138,10 +145,10 @@ export default function NavbarLayout() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent justify="end">
+      <NavbarContent className="" justify="end">
         <NavbarItem>
-          <Button as={Link} color="primary" target="_BLANK" href="https://drive.google.com/file/d/1LdP6pJA3MhxG5JIK-oU1hVVtG9AuYG9R/view" variant="flat">
-            Descargar CV
+          <Button as={Link} color="primary" target="_BLANK" href="https://wa.me/+541128736549" variant="flat">
+            Contacto
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -180,7 +187,7 @@ export default function NavbarLayout() {
         </div>
         <div className="opacity-50 text-center">
           ©{new Date().getFullYear()} StudioRender. Todos los derechos
-          reservados. matias robles
+          reservados. Matias Robles
         </div>
         <div className="opacity-50 text-center text-xs mt-12 ">
           Pagina web desarrollda por @alan_opk

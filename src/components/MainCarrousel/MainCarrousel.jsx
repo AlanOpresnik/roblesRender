@@ -97,17 +97,17 @@ export default function MainCarrousel() {
 // Definir datos de cada diapositiva del carrusel
 const carouselItems = [
   {
-    image: render1,
+    image: '/001.jpg',
     title: "ESTUDIO DE RENDER Y VISUALIZACIÓN ARQUITECTÓNICA",
     description: "Proyectos que reflejan calidad",
   },
   {
-    image: render2,
+    image: "/002.jpg",
     title: "ESTUDIO DE RENDER Y VISUALIZACIÓN ARQUITECTÓNICA",
     description: "Calidad y atencion al detalle",
   },
   {
-    image: edifico,
+    image: "/edificoBanner.PNG",
     title: "ESTUDIO DE RENDER Y VISUALIZACIÓN ARQUITECTÓNICA",
     description: "No creamos imagenes, creamos historias",
   },
