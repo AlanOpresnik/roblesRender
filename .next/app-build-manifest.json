@@ -12,10 +12,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/animaciones/page": [
+    "/exteriores/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/animaciones/page.js"
+      "static/chunks/app/exteriores/page.js"
     ]
   }
 }

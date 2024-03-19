@@ -35,7 +35,6 @@ export default function NavbarLayout() {
     { title: "Planos 3D", path: "/planos" },
     { title: "Animaciones", path: "/animaciones " },
     { title: "Sobre mi", path: "/sobremi" },
-    { title: "Descargar CV", path: "https://drive.google.com/file/d/1LdP6pJA3MhxG5JIK-oU1hVVtG9AuYG9R/view" }
   ];
   const path = usePathname();
 

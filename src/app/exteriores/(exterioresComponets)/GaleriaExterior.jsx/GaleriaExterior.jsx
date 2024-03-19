@@ -6,11 +6,12 @@ import render3 from "../../../../../public/exteriores/exterior3.jpg"
 import render4 from "../../../../../public/exteriores/exterior4.jpg"
 import render5 from "../../../../../public/exteriores/exterior5.jpg"
 import render6 from "../../../../../public/exteriores/exterior6.jpg"
+import render7 from "../../../../../public/exteriores/noTextura.webp"
 
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 
-const imagenes = [render1, render3, render4, render5,render6];
+const imagenes = [render1, render3, render4, render5,render6,render7];
 const GaleriaExterior = () => {
     const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
     const [imagenActual, setImagenActual] = useState(0);
