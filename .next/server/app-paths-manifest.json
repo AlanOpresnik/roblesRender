@@ -1,5 +1,6 @@
 {
   "/page": "app/page.js",
+  "/interiores/page": "app/interiores/page.js",
   "/exteriores/page": "app/exteriores/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/interiores/360/page": "app/interiores/360/page.js"
 }

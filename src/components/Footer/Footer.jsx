@@ -32,22 +32,22 @@ const Footer = () => {
               <Link className="hover:text-[#6E6B66]" href={"/"}>
                 Inicio
               </Link>
-              <Link className="hover:text-[#6E6B66]" href={"/nosotros"}>
+              <Link className="hover:text-[#6E6B66]" href={"/interiores"}>
                 Interiores
               </Link>
-              <Link className="hover:text-[#6E6B66]" href={"/productos/hogar"}>
+              <Link className="hover:text-[#6E6B66]" href={"/exteriores"}>
                 Exteriores
               </Link>
               <Link
                 className="hover:text-[#6E6B66]"
-                href={"/productos/fabrica"}
+                href={"/interiores/360"}
               >
                 360
               </Link>
-              <Link className="hover:text-[#6E6B66]" href={"/devoluciones"}>
+              <Link className="hover:text-[#6E6B66]" href={"/sobremi"}>
                 Sobre mi
               </Link>
-              <Link className="hover:text-[#6E6B66]" href={"/devoluciones"}>
+              <Link className="hover:text-[#6E6B66]" href={"/"}>
                 Pedir presupuesto
               </Link>
             </nav>
@@ -77,7 +77,7 @@ const Footer = () => {
               <Button
                 className="rounded-full transition-opacity py-7 h-[10px] w-[20px] hover:opacity-70 hover:bg-[#8a8a8a]  "
                 variant="contained"
-                sx={{ backgroundColor: "#9B856F" }}
+                sx={{ backgroundColor: "#8a8a8a" }}
               >
                 <Instagram sx={{ fontSize: "23px" }} />
               </Button>
