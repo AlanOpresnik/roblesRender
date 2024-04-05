@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import toast from 'react-hot-toast';
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -16,13 +17,24 @@ const ContactForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const recipient = 'matiroblesarq97@gmail.com';
-    emailjs.send('service_tcqwgck', 'template_2qt530f', formData, 'A5U2CmImp2b8hX4Gy',)
+    const templateParams = {
+      ...formData,
+      from_name: formData.name, // Utiliza el nombre del remitente proporcionado por el usuario
+      reply_to: formData.email // Utiliza la dirección de correo electrónico proporcionada por el usuario para la respuesta
+  };
+
+    emailjs.send('service_tcqwgck', 'template_2qt530f', templateParams, 'A5U2CmImp2b8hX4Gy',)
       .then((result) => {
-        console.log('Correo electrónico enviado correctamente:', result.text);
+        toast.success("Correo electrónico enviado correctamente")
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+      })
       }, (error) => {
-        console.error('Error al enviar el correo electrónico:', error.text);
+        toast.error("Error al enviar el Correo electrónico")
       });
+      
   };
 
 
@@ -53,6 +65,7 @@ const ContactForm = () => {
                   type="text"
                   id="name"
                   name="name"
+                  required
                   onChange={handleInputChange}
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
@@ -62,6 +75,7 @@ const ContactForm = () => {
               <div className="relative">
                 <label
                   htmlFor="email"
+                  required
                   className="leading-7 text-sm text-gray-600"
                 >
                   Email
@@ -86,6 +100,7 @@ const ContactForm = () => {
                 <textarea
                   id="message"
                   name="message"
+                  required
                   onChange={handleInputChange}
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 ></textarea>
