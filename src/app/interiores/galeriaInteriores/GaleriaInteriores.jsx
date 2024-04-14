@@ -16,12 +16,36 @@ import render12 from "../../../../public/interior8.jpg"
 import render13 from "../../../../public/interior9.jpg"
 import render14 from "../../../../public/interior10.jpg"
 import render15 from "../../../../public/interior11.jpg"
+import render16 from "../../../../public/04_Post.webp"
+import render17 from "../../../../public/02_Post.webp"
+import render18 from "../../../../public/07_LOFT.webp"
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
 
-const imagenes = [render1, render2, render3, render4, render5, render6, render7, render8, render9, render10, render11, render12, render13, render14, render15];
+const imagenes = [
+  render1,
+  render2,
+  render3,
+  render4,
+  render5,
+  render6,
+  render7,
+  render8,
+  render9,
+  render10,
+  render11,
+  render12,
+  render13,
+  render14,
+  render15,
+  render16,
+  render17,
+  render18
+
+
+];
 const GaleriaInteriores = () => {
   const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
   const [imagenActual, setImagenActual] = useState(0);
@@ -70,7 +94,7 @@ const GaleriaInteriores = () => {
   useEffect(() => {
     console.log("first")
   }, [imagenes])
-  
+
 
   return (
     <section

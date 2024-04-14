@@ -97,18 +97,18 @@ export default function MainCarrousel() {
 // Definir datos de cada diapositiva del carrusel
 const carouselItems = [
   {
-    image: '/001.jpg',
-    title: "ESTUDIO DE RENDER Y VISUALIZACIÓN ARQUITECTÓNICA",
+    image: '/04_Post.webp',
+    title: "ESTUDIO DE VISUALIZACIÓN ARQUITECTÓNICA",
     description: "Proyectos que reflejan calidad",
   },
   {
-    image: "/002.jpg",
-    title: "ESTUDIO DE RENDER Y VISUALIZACIÓN ARQUITECTÓNICA",
+    image: "/02_Post.webp",
+    title: "ESTUDIO DE VISUALIZACIÓN ARQUITECTÓNICA",
     description: "Calidad y atencion al detalle",
   },
   {
     image: "/edificoBanner.PNG",
-    title: "ESTUDIO DE RENDER Y VISUALIZACIÓN ARQUITECTÓNICA",
+    title: "ESTUDIO DE VISUALIZACIÓN ARQUITECTÓNICA",
     description: "No creamos imagenes, creamos historias",
   },
 ];
