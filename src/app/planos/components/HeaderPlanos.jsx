@@ -2,7 +2,7 @@
 
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
-import heroImg from "../../../../public/planos/plano4.jpg";
+import heroImg from "../../../../public/planos/plano4.webp";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@nextui-org/react";

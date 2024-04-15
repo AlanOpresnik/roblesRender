@@ -4,12 +4,10 @@ import React, { useState, useRef, useEffect } from "react";
 import render1 from "../../../../public/planos/plano1.webp";
 import render2 from "../../../../public/planos/plano2.webp";
 import render3 from "../../../../public/planos/plano3.webp";
-import render4 from "../../../../public/planos/plano4.jpg";
+import render4 from "../../../../public/planos/plano4.webp";
 
 import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
-import { Button } from "@nextui-org/react";
-import Link from "next/link";
+
 
 const imagenes = [render1, render2, render3, render4];
 const GaleriaPlanos = () => {

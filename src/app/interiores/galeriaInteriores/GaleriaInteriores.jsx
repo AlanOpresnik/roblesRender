@@ -6,19 +6,21 @@ import render2 from "../../../../public/002.jpg";
 import render3 from "../../../../public/001.jpg";
 import render4 from "../../../../public/renderCama4.PNG";
 import render5 from "../../../../public/renderCama5.PNG";
-import render6 from "../../../../public/interior2.jpeg"
-import render7 from "../../../../public/interior3.jpg"
-import render8 from "../../../../public/interior4.jpg"
+import render6 from "../../../../public/interior2.webp"
+import render7 from "../../../../public/interior3.webp"
+import render8 from "../../../../public/interior4.webp"
 import render9 from "../../../../public/interior5.jpg"
 import render10 from "../../../../public/interior6.jpg"
 import render11 from "../../../../public/interior7.jpg"
 import render12 from "../../../../public/interior8.jpg"
-import render13 from "../../../../public/interior9.jpg"
-import render14 from "../../../../public/interior10.jpg"
-import render15 from "../../../../public/interior11.jpg"
+import render13 from "../../../../public/interior9.webp"
+import render14 from "../../../../public/interior10.webp"
+import render15 from "../../../../public/interior11.webp"
 import render16 from "../../../../public/04_Post.webp"
 import render17 from "../../../../public/02_Post.webp"
-import render18 from "../../../../public/07_LOFT.webp"
+import render18 from "../../../../public/07_LOFT.webp"    
+import render19 from "../../../../public/01_LOFT.webp"
+import render20 from "../../../../public/01_Post.webp"
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { Button } from "@nextui-org/react";
@@ -42,7 +44,9 @@ const imagenes = [
   render15,
   render16,
   render17,
-  render18
+  render18,
+  render19,
+  render20
 
 
 ];
