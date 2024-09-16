@@ -5,6 +5,8 @@ import edifico from "../../../public/edificoBanner.PNG";
 import cama from "../../../public/renderCama4.PNG";
 import cama2 from "../../../public/renderCama5.PNG";
 import bosque from "../../../public/bosque.PNG";
+import exterior7 from "../../../public/exteriores/exterior7.jpeg";
+import exterior8 from "../../../public/exteriores/exterior8.jpeg";
 import "./style.css";
 import Image from "next/image";
 
@@ -14,7 +16,7 @@ const Gallery = () => {
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="flex w-full mb-20 flex-wrap">
           <h1 className="sm:text-3xl w-full text-center text-2xl font-medium title-font text-gray-900 ">
-            Galeria de renders
+            Imagenes
           </h1>
         </div>
         <div className="block md:flex flex-wrap w-full ">
@@ -73,6 +75,24 @@ const Gallery = () => {
                 alt="gallery"
                 className="w-full object-cover h-full object-center block"
                 src={bosque}
+              />
+            </div>
+            <div className="md:p-2 p-1 w-full md:w-1/2">
+              <Image
+                width={300}
+                height={300}
+                alt="gallery"
+                className="w-full object-cover h-full object-center block"
+                src={exterior7}
+              />
+            </div>
+            <div className="md:p-2 p-1 w-full md:w-1/2">
+              <Image
+                width={500}
+                height={300}
+                alt="gallery"
+                className="w-full object-cover h-full object-center block"
+                src={exterior8}
               />
             </div>
           </div>

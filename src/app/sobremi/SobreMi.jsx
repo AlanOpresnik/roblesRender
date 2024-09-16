@@ -20,7 +20,7 @@ const SobreMi = () => {
             transition={{ duration: 1 }} // Duración de la animación (1 segundo)
 
 
-            className="text-gray-600 body-font mt-[8rem] md:mt-[8rem] max-w-[1250px] overflow-hidden">
+            className="text-gray-600 body-font pt-[8rem]  max-w-[1250px] overflow-hidden">
             <div className="familia border-b-2 container mx-auto flex px-5 py-6 md:flex-row flex-col items-center">
                 <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-6 items-center text-center">
                     <h3 className="title-font border-b-2 border-[#a7967f] w-fit sm:text-4xl text-4xl mb-1 font-medium text-gray-900">

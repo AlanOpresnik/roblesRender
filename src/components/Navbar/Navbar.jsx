@@ -1,197 +1,150 @@
 "use client";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Button,
-  NavbarMenuItem,
-  NavbarMenuToggle,
-  NavbarMenu,
-} from "@nextui-org/react";
 import { useState, useEffect } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import { usePathname } from "next/navigation";
-import logo from "../../../public/Logo.jpeg";
-import Image from "next/image";
+import { Drawer, IconButton, Button, List, ListItem, ListItemText, Divider } from "@mui/material";
+import Hamburger from "hamburger-react";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 import {
-  Facebook,
   FacebookOutlined,
   Instagram,
   LinkedIn,
-  PhoneCallbackOutlined,
   PhoneInTalkOutlined,
 } from "@mui/icons-material";
+
 export default function NavbarLayout() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const path = usePathname();
 
   const menuItems = [
     { title: "Interiores", path: "/interiores" },
     { title: "Exteriores", path: "/exteriores" },
-    { title: "360°", path: "/360" },
+    { title: "360°", path: "/interiores/360" },
     { title: "Planos 3D", path: "/planos" },
-    { title: "Animaciones", path: "/animaciones " },
+    { title: "Animaciones", path: "/animaciones" },
     { title: "Sobre mi", path: "/sobremi" },
   ];
-  const path = usePathname();
 
-
-  // Manejar el evento de scroll
+  // Manejo del evento de scroll para cambiar el tamaño del Navbar
   const handleScroll = () => {
     setScrollPosition(window.scrollY);
   };
 
-  // Agregar el evento de scroll al montar el componente
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
-    // Limpiar el evento de scroll al desmontar el componente
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // Calcula la altura del Navbar en función de la posición del scroll
   const navbarHeight = scrollPosition > 50 ? "50px" : "60px";
 
   return (
-    <Navbar
-      style={{
-        height: navbarHeight,
-        transition: "height 0.3s ease-out", // Agregamos una transición suave
-      }}
-      className="w-full bg-white shadow-md fixed"
-      onMenuOpenChange={setIsMenuOpen}
-    >
-      <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
+    <header className="!z-[999999] bg-white">
+      {/* Navbar para escritorio */}
+      <div
+        style={{
+          height: navbarHeight,
+          transition: "height 0.3s ease-out",
+        }}
+        className="w-full mx-auto md:px-12 bg-white !z-50 shadow-md fixed flex items-center justify-between"
+      >
+        {/* Botón de menú tipo Hamburger para móviles */}
+        <div className="sm:hidden">
+          <IconButton onClick={() => setIsDrawerOpen(true)}>
+            <Hamburger toggled={isDrawerOpen} toggle={setIsDrawerOpen} />
+          </IconButton>
+        </div>
 
-        <NavbarBrand>
-          <Link href="/" className="font-bold text-inherit">
-            RoblesRender
-          </Link>
-        </NavbarBrand>
-      </NavbarContent>
+        {/* Nombre o logotipo */}
+        <Link href="/" className="font-bold hidden md:block text-inherit">
+          RoblesRender
+        </Link>
 
-      <NavbarContent className="hidden sm:flex gap-6" justify="center">
-        <NavbarItem>
-          <Link
-            className={` ${path === "/" ? "text-indigo-600" : "text-black"
-              }`}
-            href="/"
-          >
+        {/* Menú de navegación para escritorio (se oculta en pantallas pequeñas) */}
+        <div className="hidden sm:flex gap-6 justify-center">
+          <Link className={` ${path === "/" ? "text-indigo-600" : "text-black"}`} href="/">
             Inicio
           </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={` ${path === "/interiores" ? "text-indigo-600" : "text-black"
-              }`}
-            href="/interiores"
-          >
-            Interiores
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={` ${path === "/exteriores" ? "text-indigo-600" : "text-black"
-              }`}
-            href="/exteriores"
-          >
-            Exteriores
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={` ${path === "/interiores/360" ? "text-indigo-600" : "text-black"}`}
-            href="/interiores/360"
-          >
-            360°
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={` ${path === "/planos" ? "text-indigo-600" : "text-black"}`}
-            href="/planos"
-          >
-            Planos 3D
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={` ${path === "/animaciones" ? "text-indigo-600" : "text-black"}`}
-            href="/animaciones"
-          >
-            Animaciones
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={` ${path === "/sobremi" ? "text-indigo-600" : "text-black"
-              }`}
-            href="/sobremi"
-          >
-            Sobre mi
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
+          {menuItems.map((item, index) => (
+            <Link
+              key={index}
+              className={` ${path === item.path ? "text-indigo-600" : "text-black"}`}
+              href={item.path}
+            >
+              {item.title}
+            </Link>
+          ))}
+        </div>
 
-      <NavbarContent className="" justify="end">
-        <NavbarItem>
-          <Button as={Link} color="primary" target="_BLANK" href="https://wa.me/+541128736549" variant="flat">
+        {/* Botón de contacto visible en pantallas grandes */}
+        <div className="hidden sm:block">
+          <Button
+            color="primary"
+            target="_blank"
+            href="https://wa.me/+541128736549"
+            variant="outlined"
+          >
             Contacto
           </Button>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarMenu
-        className={`bg-white    ${isMenuOpen ? "left-0" : "left-[-400px]"
-          } transition-all duration-300   w-[320px]`}
-      >
-        <div className="flex flex-col items-center ">
-          <div className="h-[200px]">
+        </div>
+      </div>
+
+      {/* Drawer de MUI para móviles, controlado por el botón Hamburger */}
+      <Drawer anchor="left" open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
+        <div className="w-[300px] p-4">
+          {/* Contenido del Drawer, menú de navegación */}
+          <div className="h-[200px] flex justify-center items-center">
             <img
-              className="h-[220px] w-[220px]"
+              className="h-[150px] w-[150px]"
               src={"/Logo.jpeg"}
-              width={200}
-              height={100}
-              alt="logo "
+              alt="Logo"
             />
           </div>
 
-          {menuItems.map((item, index) => (
-            <NavbarMenuItem className="mt-2" key={`${item}-${index}`}>
-              <Link
-                className="w-full text-black border-b"
+          <List>
+            {menuItems.map((item, index) => (
+              <ListItem
+                button
+                key={index}
+                component={Link}
                 href={item.path}
-                size="lg"
+                onClick={() => setIsDrawerOpen(false)} // Cierra el Drawer al hacer clic
               >
-                {item.title}
-              </Link>
-            </NavbarMenuItem>
-          ))}
+                <ListItemText primary={item.title} />
+              </ListItem>
+            ))}
+          </List>
+
+          <Divider />
+
+          {/* Iconos de redes sociales */}
+          <div className="flex justify-center gap-4 my-4">
+            <IconButton>
+              <FacebookOutlined />
+            </IconButton>
+            <IconButton>
+              <LinkedIn />
+            </IconButton>
+            <IconButton>
+              <Instagram />
+            </IconButton>
+            <IconButton>
+              <PhoneInTalkOutlined />
+            </IconButton>
+          </div>
+
+          <Divider />
+
+          <div className="text-center opacity-50 mt-4">
+            ©{new Date().getFullYear()} StudioRender. Todos los derechos reservados.
+          </div>
+
+          <div className="text-center text-xs opacity-50 mt-2">
+            Página web desarrollada por @alan_opk
+          </div>
         </div>
-        <div className="flex justify-center gap-5 mt-4  py-8 opacity-80">
-          <FacebookOutlined />
-          <LinkedIn />
-          <Instagram />
-          <PhoneInTalkOutlined />
-        </div>
-        <div className="opacity-50 text-center">
-          ©{new Date().getFullYear()} StudioRender. Todos los derechos
-          reservados. Matias Robles
-        </div>
-        <div className="opacity-50 text-center text-xs mt-12 ">
-          Pagina web desarrollda por @alan_opk
-        </div>
-      </NavbarMenu>
-    </Navbar>
+      </Drawer>
+    </header>
   );
 }

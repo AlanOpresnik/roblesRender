@@ -14,7 +14,6 @@ const ImageViewer = () => {
 
     return (
         <View360
-
             id="viewer" // Cambié "#viewer" a "id"
             className="is-16by9  h-[400px] md:h-[500px] rounded-lg shadow-xl"
             projection={projection}

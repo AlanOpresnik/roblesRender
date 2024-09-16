@@ -15,15 +15,11 @@ export default function Home() {
         position="top-center"
       />
       <MainCarrousel />
-      <div>
-        <DividerSections />
-      </div>
+   
       <div>
         <Gallery />
       </div>
-      <div className="pb-24 max-w-[1220px] mx-auto">
-        <HeroDividerMain />
-      </div>
+ 
       <div>
         <ContactForm />
       </div>

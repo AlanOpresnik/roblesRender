@@ -5,7 +5,7 @@ import GaleriaInteriores from './galeriaInteriores/GaleriaInteriores'
 
 const Interiorespage = () => {
   return (
-    <div className='mt-20 flex flex-col items-center max-w-[1190px] mx-auto'>
+    <div className='pt-20 flex flex-col items-center max-w-[1190px] mx-auto'>
         <HeaderInterior/>
         <GaleriaInteriores/>
     </div>

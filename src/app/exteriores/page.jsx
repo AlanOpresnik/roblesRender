@@ -6,7 +6,7 @@ import VideoExterior from './(exterioresComponets)/VideoExterior/VideoExterior'
 
 const page = () => {
     return (
-        <div className='mt-20 flex flex-col items-center max-w-[1190px] mx-auto'>
+        <div className='pt-20 flex flex-col items-center max-w-[1190px] mx-auto'>
             <HeaderExterior />
             <VideoExterior/>
             <GaleriaExterior />
