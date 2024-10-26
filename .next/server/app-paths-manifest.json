@@ -1,7 +1,8 @@
 {
-  "/interiores/page": "app/interiores/page.js",
+  "/not-found": "app/not-found.js",
   "/page": "app/page.js",
+  "/interiores/page": "app/interiores/page.js",
   "/interiores/360/page": "app/interiores/360/page.js",
-  "/planos/page": "app/planos/page.js",
-  "/exteriores/page": "app/exteriores/page.js"
+  "/exteriores/page": "app/exteriores/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }

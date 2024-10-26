@@ -12,37 +12,26 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/planos/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/planos/page.js"
-    ],
     "/interiores/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/interiores/page.js"
-    ],
-    "/exteriores/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/exteriores/page.js"
-    ],
-    "/animaciones/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/animaciones/page.js"
-    ],
-    "/sobremi/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/sobremi/page.css",
-      "static/chunks/app/sobremi/page.js"
     ],
     "/interiores/360/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/interiores/360/page.css",
       "static/chunks/app/interiores/360/page.js"
+    ],
+    "/exteriores/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/exteriores/page.js"
+    ],
+    "/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/not-found.js"
     ]
   }
 }

@@ -21,6 +21,14 @@ import render17 from "../../../../public/02_Post.webp"
 import render18 from "../../../../public/07_LOFT.webp"    
 import render19 from "../../../../public/01_LOFT.webp"
 import render20 from "../../../../public/01_Post.webp"
+import render21 from "../../../../public/interior12.jpeg"
+import render22 from "../../../../public/interior13.jpeg"
+import render23 from "../../../../public/interior14.jpeg"
+import render24 from "../../../../public/interior15.jpeg"
+import render25 from "../../../../public/interior16.jpeg"
+import render26 from "../../../../public/interior17.jpeg"
+import render27 from "../../../../public/interior18.jpeg"
+
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { Button } from "@nextui-org/react";
@@ -46,9 +54,14 @@ const imagenes = [
   render17,
   render18,
   render19,
-  render20
-
-
+  render20,
+  render21,
+  render22,
+  render23,
+  render24,
+  render25,
+  render26,
+  render27,
 ];
 const GaleriaInteriores = () => {
   const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
